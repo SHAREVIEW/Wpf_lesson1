@@ -64,4 +64,4 @@ namespace Wpf_lesson1
         }
     }
 }
-//enter、tab、esc、blank、orientation key is not means input 
+//enter、tab、esc、blank、orientation key is not means input  
