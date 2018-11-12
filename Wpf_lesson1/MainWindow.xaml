@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_lesson1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown" PreviewKeyDown="Windown_PreviewKeyDown">
+    <Grid KeyDown="Grid_KeyDown" PreviewKeyDown="Grid_PreviewKeyDown">
+        <Button Content="Button" HorizontalAlignment="Right" Margin="0,206,53,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.892,0.895" Grid.Column="0" Grid.Row="0"/>
+        <Button Content="Button" HorizontalAlignment="Right" Margin="0,230,53,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="rotatedButton" Content="按钮" HorizontalAlignment="Right" Margin="0,183,52,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Background="#FFD4F7E1" Click="rotatedButton_Click" KeyDown="rotateButton_KeyDown" PreviewKeyDown="rotatedButton_PreviewKeyDown">
+            <Button.RenderTransform>
+                <TransformGroup> 
+                    <ScaleTransform/>
+                    
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.268"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Margin="0,0,682,309" Source="timg.jpg" Stretch="Fill"/>
+
     </Grid>
 </Window>
